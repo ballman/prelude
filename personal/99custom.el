@@ -23,6 +23,8 @@
 (setq mouse-yank-at-point t)
 (setq x-select-enable-clipboard t)
 
+;; autocompletion
+(require 'auto-complete-config)
 
 (global-set-key "\e\e" 'goto-line)
 

@@ -108,7 +108,7 @@
    `(font-lock-negation-char-face ((,class (:foreground ,ballman-fg))))
    `(font-lock-preprocessor-face ((,class (:foreground ,ballman-blue))))
    `(font-lock-string-face ((,class (:foreground ,ballman-orange))))
-   `(font-lock-type-face ((,class (:foreground ,ballman-blue))))
+   `(font-lock-type-face ((,class (:foreground ,ballman-blue-4))))
    `(font-lock-variable-name-face ((,class (:foreground ,ballman-orange))))
    `(font-lock-warning-face ((,class (:foreground ,ballman-yellow-1 :weight bold :underline t))))
 
