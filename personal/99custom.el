@@ -18,8 +18,6 @@
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
 
 
-(require 'psl-mode)
-(add-to-list 'auto-mode-alist '("\\.psl$" . psl-mode))
 (setq mouse-yank-at-point t)
 (setq x-select-enable-clipboard t)
 
@@ -39,3 +37,7 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
