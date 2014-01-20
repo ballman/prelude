@@ -4,7 +4,7 @@
       ;; colors with +x are lighter, colors with -x are darker
       (ballman-fg "#ffffff")
       (ballman-fg-1 "#bbbbbb")
-      (ballman-fg-2 "#656555")
+      (ballman-fg-2 "#777777")
       (ballman-bg "#000000")
       (ballman-bg+05 "#080808")
       (ballman-bg+1 "#2b2b2b")
@@ -470,6 +470,10 @@
    ;; show-paren
    `(show-paren-mismatch ((,class (:foreground ,ballman-red-3 :background ,ballman-bg :weight bold))))
    `(show-paren-match ((,class (:foreground ,ballman-cyan :background ,ballman-bg :weight bold))))
+
+   ;; show-smartparen
+   `(sp-show-pair-match-face ((,class (:foreground ,ballman-bg :background ,ballman-cyan :weight bold))))
+   `(sp-show-pair-mismatch-face ((,class (:foreground ,ballman-red-3 :background ,ballman-bg :weight bold))))
 
    ;; SLIME
    `(slime-repl-inputed-output-face ((,class (:foreground ,ballman-red))))

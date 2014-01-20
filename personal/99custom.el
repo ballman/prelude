@@ -41,3 +41,7 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+
+(add-to-list 'default-frame-alist '(width  . 81))
+(add-to-list 'default-frame-alist '(height . 65))
+

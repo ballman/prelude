@@ -23,3 +23,5 @@
            (replace-regexp-in-string "\033\\[[0-9]+[A-Z]" "" output)))))
 
 (skewer-setup)
+
+(setq js2-basic-offset 2)
