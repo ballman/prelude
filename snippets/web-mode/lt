@@ -1,0 +1,5 @@
+#contributor : The werefrog
+#name : <% link_to "...", ...>
+# --
+<%= link_to "$1", $0 %>
+

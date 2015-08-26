@@ -1,1 +1,1 @@
-(require 'rinari)
+;(require 'rinari)

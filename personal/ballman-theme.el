@@ -58,7 +58,7 @@
    ;;; compilation
    `(compilation-column-face ((,class (:foreground ,ballman-yellow))))
    `(compilation-enter-directory-face ((,class (:foreground ,ballman-green))))
-   `(compilation-error-face ((,class (:foreground ,ballman-red-1 :weight bold :underline t))))
+   `(compilation-error-face ((,class (:background ,ballman-red-1 :weight bold :underline t))))
    `(compilation-face ((,class (:foreground ,ballman-fg))))
    `(compilation-info-face ((,class (:foreground ,ballman-blue))))
    `(compilation-info ((,class (:foreground ,ballman-green+4 :underline t))))
@@ -66,7 +66,7 @@
    `(compilation-line-face ((,class (:foreground ,ballman-yellow))))
    `(compilation-line-number ((,class (:foreground ,ballman-yellow))))
    `(compilation-message-face ((,class (:foreground ,ballman-blue))))
-   `(compilation-warning-face ((,class (:foreground ,ballman-yellow-1 :weight bold :underline t))))
+   `(compilation-warning-face ((,class (:background ,ballman-yellow-1 :weight bold :underline t))))
 
    ;;; grep
    `(grep-context-face ((,class (:foreground ,ballman-fg))))
@@ -110,7 +110,7 @@
    `(font-lock-string-face ((,class (:foreground ,ballman-orange))))
    `(font-lock-type-face ((,class (:foreground ,ballman-blue-4))))
    `(font-lock-variable-name-face ((,class (:foreground ,ballman-orange))))
-   `(font-lock-warning-face ((,class (:foreground ,ballman-yellow-1 :weight bold :underline t))))
+   `(font-lock-warning-face ((,class (:background ,ballman-yellow-1 :weight bold :underline t))))
 
    `(c-annotation-face ((,class (:inherit font-lock-constant-face))))
 
@@ -181,8 +181,8 @@
    `(eshell-ls-symlink ((,class (:foreground ,ballman-cyan :weight bold))))
 
    ;; flymake
-   `(flymake-errline ((,class (:foreground ,ballman-red-1 :weight bold :underline t))))
-   `(flymake-warnline ((,class (:foreground ,ballman-yellow-1 :weight bold :underline t))))
+   `(flymake-errline ((,class (:background ,ballman-red-1 :foreground ,ballman-bg :weight bold :underline t))))
+   `(flymake-warnline ((,class (:background ,ballman-yellow-1 :foreground ,ballman-bg :weight bold :underline t))))
 
    ;; flyspell
    `(flyspell-duplicate ((,class (:foreground ,ballman-yellow :weight bold :underline t))))
@@ -290,7 +290,7 @@
 
    ;; hl-line-mode
    `(hl-line-face ((,class (:background ,ballman-bg))))
-   `(hl-line ((,class (:background ,ballman-bg+05))))
+   `(hl-line ((,class (:background ,ballman-bg+1))))
 
    ;; ido-mode
    `(ido-first-match ((,class (:foreground ,ballman-blue :weight bold))))

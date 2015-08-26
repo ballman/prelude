@@ -12,17 +12,30 @@
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(default ((t (:stipple nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 80 :width normal :foundry "*" :family "lucidatypewriter")))))
+  ;; If there is more than one, they won't rk right.
+ '(default ((t (:stipple nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "*" :family "Inconsolata")))))
 
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
 
-
 (setq mouse-yank-at-point t)
 (setq x-select-enable-clipboard t)
+(setq show-trailing-whitespace t)
 
 ;; autocompletion
 (require 'auto-complete-config)
+
+;; ido
+(require 'ido)
+(ido-mode t)
+;; Display ido results vertically, rather than horizontally
+(setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
+(defun ido-disable-line-truncation () (set (make-local-variable 'truncate-lines) nil))
+(add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-truncation)
+(defun ido-define-keys () ;; C-n/p is more intuitive in vertical layout
+  (define-key ido-completion-map (kbd "C-n") 'ido-next-match)
+  (define-key ido-completion-map (kbd "C-p") 'ido-prev-match))
+(add-hook 'ido-setup-hook 'ido-define-keys)
+
 
 (global-set-key "\e\e" 'goto-line)
 
@@ -37,11 +50,17 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c C-c r") 'inf-ruby)
+(global-set-key (kbd "C-c C-c a") 'rvm-activate-corresponding-ruby)
 
+(global-set-key (kbd "C-c C-e e") 'ruby-refactor-extract-to-method)
+(global-set-key (kbd "C-c C-e v") 'ruby-refactor-extract-local-variable)
+(global-set-key (kbd "C-c C-e c") 'ruby-refactor-extract-constant)
+(global-set-key (kbd "C-c C-e p") 'ruby-refactor-add-parameter)
+(global-set-key (kbd "C-c C-e l") 'ruby-refactor-extract-to-let)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 
 (add-to-list 'default-frame-alist '(width  . 81))
 (add-to-list 'default-frame-alist '(height . 65))
-
